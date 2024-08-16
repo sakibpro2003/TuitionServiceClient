@@ -4,7 +4,7 @@ import TuitionCard from "../Components/TuitionCard";
 
 const Home = () => {
     return (
-        <div>
+        <div className="mb-10">
             {/* <Banner></Banner> */}
             <ReactTabs></ReactTabs>
             {/* <TuitionCard></TuitionCard> */}

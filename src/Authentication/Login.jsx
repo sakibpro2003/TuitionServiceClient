@@ -1,7 +1,14 @@
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Login = () => {
+  // const notify = () => toast("Wow so easy!");
+  const {user} = useContext(AuthContext);
+  console.log(user?.displayName)
+
   const {signIn,signInWithGoogle} = useContext(AuthContext);
 
   const googleLogin = ()=>{
@@ -15,6 +22,7 @@ const Login = () => {
     // console.log(email,password)
     signIn(email, password)
     .then(result=>{
+      toast.success("hi",user?.displayName);
       console.log(result);  
     })
     .catch(error=>{
@@ -93,6 +101,8 @@ const Login = () => {
             </a>
           </p>
         </div>
+      
+
       </div>
     );
 };
