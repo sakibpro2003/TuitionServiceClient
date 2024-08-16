@@ -22,16 +22,16 @@ const ReactTabs = () => {
 
   console.log(serviceData);
   return (
-    <div>
+    <div className="text-center">
       <Tabs>
         <TabList>
-          <Tab>Title 1</Tab>
-          <Tab>Title 2</Tab>
-          <Tab>Title 3</Tab>
+          <Tab>Physics</Tab>
+          <Tab>Math</Tab>
+          <Tab>Biology</Tab>
         </TabList>
 
         <TabPanel>
-          <div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
             {serviceData
               .filter((s) => s.subject === "Physics")
               .map((singleData) => (
@@ -41,7 +41,7 @@ const ReactTabs = () => {
         </TabPanel>
 
         <TabPanel>
-        <div>
+        <div className="grid grid-cols-3 gap-4">
             {serviceData
               .filter((s) => s.subject === "Math")
               .map((singleData) => (
@@ -51,7 +51,7 @@ const ReactTabs = () => {
         </TabPanel>
 
         <TabPanel>
-        <div>
+        <div className="grid grid-cols-3 gap-4">
             {serviceData
               .filter((s) => s.subject === "Biology")
               .map((singleData) => (

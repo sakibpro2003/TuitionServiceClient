@@ -3,12 +3,12 @@ const TuitionCard = ({ singleData }) => {
     singleData;
 
   return (
-    <section className="mb-2 border bg-neutral-100 p-4 rounded-lg max-w-full">
+    <section className=" border bg-neutral-100 p-4 rounded-lg ">
       <div className="mx-auto">
         <div className="card flex flex-row max-w-lg">
-          <div className="w-20 h-20 mx-auto mb-6 md:mr-6 flex-shrink-0">
+          <div className="w-24 h-28  mx-auto mb-6 md:mr-6 flex-shrink-0">
             <img
-              className="object-cover rounded-full"
+              className=""
               src={profile_picture}
             />
           </div>
