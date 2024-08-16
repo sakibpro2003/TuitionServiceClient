@@ -2,7 +2,11 @@ import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const Login = () => {
-  const {signIn} = useContext(AuthContext);
+  const {signIn,signInWithGoogle} = useContext(AuthContext);
+
+  const googleLogin = ()=>{
+    signInWithGoogle();
+  }
 
   const handleLogin = (e)=>{
     e.preventDefault();
@@ -80,7 +84,7 @@ const Login = () => {
               </button>
             </div>
           </form>
-          <button className="btn w-full mt-2">Google</button>
+          <button onClick={googleLogin} className="btn w-full mt-2">Google</button>
 
           <p className="mt-10 text-center text-sm text-gray-500">
             Not a member?{' '}

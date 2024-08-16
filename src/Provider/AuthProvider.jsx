@@ -67,10 +67,10 @@ const AuthProvider = ({ children }) => {
       });
   };
 
-  //   const signInWithGoogle = () => {
-  //     setLoading(true)
-  //     return signInWithPopup(auth, googleProvider)
-  //   }
+    const signInWithGoogle = () => {
+      setLoading(true)
+      return signInWithPopup(auth, googleProvider)
+    }
 
   //   const updateUserProfile = (name, photo) => {
   //       return updateProfile(auth.currentUser, {
@@ -104,7 +104,7 @@ const AuthProvider = ({ children }) => {
     // setLoading,
     createUser,
     signIn,
-    // signInWithGoogle,
+    signInWithGoogle,
     logOut,
     updateUser
 
